@@ -58,7 +58,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "npm i"
   },
