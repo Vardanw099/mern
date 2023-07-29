@@ -47,8 +47,8 @@ app.get("/users/content/:id", (req, res) => {
   User.findById(req.params.id).then((result) => res.status(200).json(result));
 });
 
-app.post("/users/login", async (req, res) => {
-  let info = await User.findOne({
+app.post("/users/login", (req, res) => {
+  let info = User.findOne({
     username: req.body.username,
     password: req.body.password,
   });

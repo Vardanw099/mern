@@ -59,7 +59,8 @@
   },
   "scripts": {
     "start": "index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "npm i"
   },
   "author": "Vardan",
   "license": "ISC"
