@@ -489,3 +489,9 @@ label {
   border-color: #007bff; /* Change the border color on focus */
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
 }
+
+@media only screen and (max-width: 768px) {
+  .togh {
+    height: 145px;
+  }
+}
