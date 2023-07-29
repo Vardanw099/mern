@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Loader */
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid rgba(0, 102, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #0066ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #0066ff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #0066ff;
+  border-right: 3px solid #0066ff;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.loader span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.loader span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00aeff;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px 5px #0066ff;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+/* Add the updated CSS styles here */
+.loginBody {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 600px;
+  width: 90%;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.login-header {
+  background-color: #007bff;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.login-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.login-form {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  opacity: 0.6;
+}
+
+.loginBody input[type="text"],
+.loginBody input[type="password"] {
+  width: 100%;
+  padding: 12px 40px 12px 30px; /* Adjust padding to accommodate icon */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Style for valid inputs */
+.loginBody input[type="text"]:valid,
+.loginBody input[type="password"]:valid {
+  border-color: #00cc00;
+  background-color: #f0fff0;
+}
+
+/* Style for focused inputs */
+.loginBody input[type="text"]:focus,
+.loginBody input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f0faff;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for the login container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* registration */
+
+/* Add the updated CSS styles here */
+/* Add the updated CSS styles here */
+.regBody {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.registration-container {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px; /* Limit the width for a better responsive design */
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.registration-header {
+  background-color: #007bff;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.registration-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.registration-form {
+  padding: 20px; /* Reduced padding for a better height-to-width ratio */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.regBody input[type="text"],
+.regBody input[type="email"],
+.regBody input[type="password"],
+.regBody input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.regBody input[type="text"]:focus,
+.regBody input[type="email"]:focus,
+.regBody input[type="password"]:focus,
+.regBody input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f0faff;
+}
+
+.registration-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.registration-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for the registration container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* header */
+
+.header {
+  height: 80px;
+  background: #007bff;
+}
+
+.logo,
+.userInfo {
+  height: 80px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.userInfo {
+  justify-content: space-evenly;
+}
+
+.userInfo p {
+  margin: 0;
+}
+
+.userInfo a {
+  text-decoration: none !important;
+  color: #013266;
+}
+
+.firstForm {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.firstForm input:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Change the border color on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+.firstForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.firstForm button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.togh {
+  background: #f0faff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 0;
+  padding: 0 10px;
+  animation: anim 0.6s forwards;
+}
+
+.togh:hover {
+  background: #dcf1fc;
+}
+
+.togh p {
+  margin: 0;
+  padding: 0;
+}
+
+.col-lg-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editbut,
+.delbut,
+.subbut,
+.cancelbut {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background: #007bff;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.editbut:hover {
+  transition: 0.3s;
+  background: #0056b3;
+}
+
+.delbut,
+.cancelbut {
+  background: rgb(255, 22, 22);
+}
+
+.delbut:hover,
+.cancelbut:hover {
+  transition: 0.3s;
+  background: rgb(177, 0, 0);
+}
+
+.subbut {
+  background: rgb(23, 255, 61);
+}
+
+.subbut:hover {
+  transition: 0.3s;
+  background: rgb(0, 201, 33);
+}
+
+.togh input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.togh input:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Change the border color on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
