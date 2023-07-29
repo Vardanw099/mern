@@ -23,7 +23,7 @@ const App = () => {
   // }, []);
 
   return (
-    <BrowserRouter basename="/mern">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
